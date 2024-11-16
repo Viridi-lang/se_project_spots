@@ -16,4 +16,4 @@ This project is the creation of an image sharing website. It is meant to allow u
 
 This webpage is deployed to Github Pages.
 
--Deployment Link:
+-[Deployment Link] https://viridi-lang.github.io/se_project_spots/
