@@ -7,3 +7,15 @@
 
   text-align: center;
 }
+
+@media screen and (max-width: 627px) {
+  .footer__copyright {
+    width: 104px;
+height: 16px;
+top: 2448px;
+left: 108px;
+gap: 0px;
+opacity: 0px;
+
+  }
+}
