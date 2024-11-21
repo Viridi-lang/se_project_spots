@@ -2,8 +2,8 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  top: 1340px;
-  left: 668px;
+  padding-top: 60px;
+  padding-left: 60px;
 
   text-align: center;
 }
@@ -11,11 +11,11 @@
 @media screen and (max-width: 627px) {
   .footer__copyright {
     width: 104px;
-height: 16px;
-top: 2448px;
-left: 108px;
-gap: 0px;
-opacity: 0px;
-
+    height: 16px;
+    top: 2448px;
+    left: 108px;
+    gap: 0px;
+    opacity: 70%;
+    color: #212121;
   }
 }
