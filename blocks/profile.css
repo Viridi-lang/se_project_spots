@@ -53,7 +53,9 @@
   margin-right: auto;
   font-family: "Poppins";
   color: #212121;
+  display: flex;
   align-items: center;
+  margin-top: auto;
 }
 
 .profile__edit-btn:hover {
@@ -116,6 +118,11 @@
     margin-left: 0;
     max-width: 288px;
     width: 100%;
+    justify-content: center;
+  }
+
+  .profile__edit-btn {
+    margin:auto;
   }
 }
 
