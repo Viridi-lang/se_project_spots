@@ -27,12 +27,13 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
-  color:#212121;
+  color: #212121;
 }
 
 .profile__description {
   font-size: 16px;
   line-height: 16px;
+  font-weight: 500;
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -47,11 +48,13 @@
 .profile__edit-btn {
   background-color: transparent;
   border: none;
-  border-radius: 90px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
   gap: 8px;
   opacity: 70%;
   margin-right: auto;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #212121;
   display: flex;
   align-items: center;
@@ -60,11 +63,13 @@
 
 .profile__edit-btn:hover {
   cursor: pointer;
+  opacity: 100%;
 }
 
 .profile__add-btn {
-  height: 16px;
+  height: 52px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 16px;
   margin-left: auto;
   background-color: #212121;
@@ -72,14 +77,17 @@
   gap: 8px;
   border-radius: 8px;
   margin-top: auto;
-  font-family: "Poppins";
-  color: #FCF5E5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #fcf5e5;
   display: flex;
   align-items: center;
+  border: none;
+  opacity: 100%;
 }
 
 .profile__add-btn:hover {
   cursor: pointer;
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
@@ -122,9 +130,6 @@
   }
 
   .profile__edit-btn {
-    margin:auto;
+    margin: auto;
   }
-}
-
-@media screen and (max-width: 1440px) {
 }
