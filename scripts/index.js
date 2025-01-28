@@ -25,7 +25,7 @@ const cardElement = cardTemplate.content
 .querySelector(".card")
 .cloneNode(true);
 
-const cardNameEl = cardElement.queryselector(".card__title");
+const cardNameEl = cardElement.querySelector(".card__title");
 
 cardNameEl.textcontent = data.name;
 
@@ -54,6 +54,6 @@ editModalCloseBtn.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
 for (let i = 0; i < initialCards.length; i++) {
-  const cardElement = (getCardElement(initialCards[i]));
-  cardsList.prepend("cardElement")
+  const cardElement = getCardElementetCardElement(initialCards[i]);
+  cardsList.prepend(cardElement)
 }
