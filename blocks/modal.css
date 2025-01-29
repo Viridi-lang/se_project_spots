@@ -21,13 +21,13 @@
   background: #fff;
   padding:32px 50px;
   max-width: 730px;
-  position:relative;
+  position: relative;
   width: 100%;
   box-sizing: border-box;
 }
 
 .modal__close-btn {
-  position:absolute;
+  position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
@@ -61,6 +61,7 @@
 @media screen and (max-width: 627px) {
   .modal{
     padding: 0 10px;
+  }
 
     .modal__container {
       padding: 12px;
@@ -83,5 +84,5 @@
     .modal__submit-btn {
       width: 100%;
     }
-  }
+
 }

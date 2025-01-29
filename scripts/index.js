@@ -12,30 +12,16 @@ const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
 const editModal = document.querySelector("#edit-modal");
-const editFormElement = editModal.querySelector(".modal__form")
+const editFormElement = editModal.querySelector(".modal__form");
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
-const editModalNameInput = editModal.querySelector("#profile-name-input")
-const editModalDescriptionInput = editModal.querySelector("#profile-description-input")
+const editModalNameInput = editModal.querySelector("#profile-name-input");
+const editModalDescriptionInput = editModal.querySelector("#profile-description-input");
 
-const cardTemplate = document.querySelector("#card-template");
-const cardList = document.querySelector(".cards__list");
-
-function getCardElement(data) {
-const cardElement = cardTemplate.content
-.querySelector(".card")
-.cloneNode(true);
-
-const cardNameEl = cardElement.querySelector(".card__title");
-
-cardNameEl.textcontent = data.name;
-
-return cardElement;
-}
 
 function openModal() {
-  editModalNameInput.value = profileName.textContentl;
-  editModalDescriptionInput.value = profileDescription.textContentl;
-  editProfileModal.classList.add("modal_opened");
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  editModal.classList.add("modal_opened");
 }
 
 function closeModal() {
@@ -43,17 +29,12 @@ function closeModal() {
 }
 
 function handleEditFormSubmit(evt) {
-evt.preventDefault();
-profileName.textContent = editModalNameInput.value;
-profileDescription.textContent = editModalDescriptionInput.value;
-closeModal();
-}
+  evt.preventDefault();
+  profileName.textContent = editModalNameInput.value;
+  profileDescription.textContent = editModalDescriptionInput.value;
+  closeModal();
+};
 
 profileEditButton.addEventListener("click", openModal);
 editModalCloseBtn.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
-
-for (let i = 0; i < initialCards.length; i++) {
-  const cardElement = getCardElementetCardElement(initialCards[i]);
-  cardsList.prepend(cardElement)
-}
