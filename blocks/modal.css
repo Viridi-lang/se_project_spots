@@ -91,6 +91,8 @@
       padding: 12px;
       width: 320px;
       padding: 12px;
+      margin-left: 10px;
+      margin-right: 10px;
       border-radius: 8px;
       gap: 24px;
     }
