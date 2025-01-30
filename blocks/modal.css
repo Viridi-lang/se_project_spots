@@ -89,10 +89,8 @@
 
     .modal__container {
       padding: 12px;
-      width: 300px;
+      width: 320px;
       padding: 12px;
-      top: 134px;
-      right: 10px;
       border-radius: 8px;
       gap: 24px;
     }
