@@ -41,6 +41,7 @@
 
 .modal__close-btn:hover {
   cursor: pointer;
+  opacity: 100%;
 }
 
 .modal__title{
@@ -61,10 +62,12 @@
   padding: 16px 12px;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+  opacity: 40%;
 }
 
 .modal__input:hover {
   cursor: pointer;
+  opacity: 100%;
 }
 
 .modal__submit-btn {
@@ -89,8 +92,8 @@
       width: 300px;
       height: 336px;
       padding: 12px;
-      margin-top: 134px;
-      margin-right: 10px;
+      top: 134px;
+      right: 10px;
       border-radius: 8px;
       gap: 24px;
     }
@@ -106,6 +109,12 @@
     .modal__close-btn {
       top: 12px;
       right: 12px;
+      opacity: 40%;
+    }
+
+    .modal__close-btn:hover {
+      cursor: pointer;
+      opacity: 100%;
     }
 
     .modal__label {
@@ -114,6 +123,25 @@
 
     .modal__submit-btn {
       width: 100%;
+      padding: 18px 32px;
+      gap: 8px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
     }
 
+    .modal__submit-btn:hover {
+      cursor: pointer;
+    }
+
+    .modal__input {
+      width: 100%;
+      opacity: 40%;
+    }
+
+    .modal__input:hover {
+      cursor: pointer;
+      opacity: 100%;
+    }
 }
