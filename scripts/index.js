@@ -60,15 +60,13 @@ function getCardElement(data) {
   });
 
   cardDeleteBtn.addEventListener("click", () => {
-    cardDeleteBtn.closest (".card").remove();
+    cardElement.remove();
   })
 
   return cardElement;
 }
 
 function openModal(modal) {
-  editModalNameInput.value = profileName.textContent;
-  editModalDescriptionInput.value = profileDescription.textContent;
   modal.classList.add("modal_opened");
 }
 
@@ -80,7 +78,7 @@ function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal(cardModal);
+  closeModal(editModal);
 };
 
 function handleAddCardSubmit(evt) {
@@ -89,6 +87,7 @@ function handleAddCardSubmit(evt) {
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
   closeModal(cardModal);
+  evt.target.reset()
 }
 
 profileEditButton.addEventListener("click", () => {
