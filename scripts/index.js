@@ -1,4 +1,4 @@
-// TODO pass settings object to the validation functions that are called in this file
+import { settings, disableButton, resetValidation } from "./validation.js"
 
 const initialCards = [
   {
@@ -45,7 +45,7 @@ const editModalDescriptionInput = editModal.querySelector(
 // Card form elements
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
-const cardSubmitBtn = cardModal.querySelector(".modal__button");
+const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
@@ -92,13 +92,30 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openModalEl = document.querySelector(".modal_opened");
+    if (openModalEl) closeModal(openModalEl);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
+
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -120,7 +137,7 @@ function handleAddCardSubmit(evt) {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editForm, [cardNameInput, descriptionInput]);
+  resetValidation(editFormElement, settings);
   openModal(editModal);
 });
 
@@ -129,6 +146,7 @@ editModalCloseBtn.addEventListener("click", () => {
 });
 
 cardModalBtn.addEventListener("click", () => {
+  resetValidation(cardForm, settings)
   openModal(cardModal);
 });
 
