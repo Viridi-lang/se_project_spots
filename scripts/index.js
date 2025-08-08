@@ -133,10 +133,10 @@ function handleAddCardSubmit(evt) {
 }
 
 profileEditButton.addEventListener("click", () => {
-  editModalNameInput.value = profileName.textContent;
-  editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement, getInputList(editFormElement, settings), settings);
-  openModal(editModal);
+editModalNameInput.value = profileName.textContent;
+editModalDescriptionInput.value = profileDescription.textContent;
+resetValidation(editFormElement, Array.from(editFormElement.querySelectorAll(settings.inputSelector)));
+openModal(editModal);
 });
 
 editModalCloseBtn.addEventListener("click", () => {
@@ -144,9 +144,9 @@ editModalCloseBtn.addEventListener("click", () => {
 });
 
 cardModalBtn.addEventListener("click", () => {
-  resetValidation(cardForm, getInputList(cardForm, settings), settings);
-  openModal(cardModal);
-});
+resetValidation(cardForm, Array.from(cardForm.querySelectorAll(settings.inputSelector)));
+openModal(cardModal);
+ });
 
 cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
