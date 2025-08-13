@@ -132,31 +132,24 @@ function handleAddCardSubmit(evt) {
 }
 
 profileEditButton.addEventListener("click", () => {
-editModalNameInput.value = profileName.textContent;
-editModalDescriptionInput.value = profileDescription.textContent;
-resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput], settings);
-openModal(editModal);
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
+  openModal(editModal);
 });
 
-editModalCloseBtn.addEventListener("click", () => {
-const closeButtons = document.querySelectorAll('.modal__close-btn');
+const closeButtons = document.querySelectorAll(".modal__close-btn");
 closeButtons.forEach((button) => {
-  const modal = button.closest('.modal');
-  button.addEventListener('click', () => closeModal(modal));
-});
-  closeModal(editModal);
+  const modal = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(modal));
 });
 
 cardModalBtn.addEventListener("click", () => {
-openModal(cardModal);
- });
-
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
-});
-
-previewCloseButton.addEventListener("click", () => {
-  closeModal(previewModal);
+  openModal(cardModal);
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);

@@ -151,8 +151,6 @@
   cursor: not-allowed;
 }
 
-
-
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
@@ -220,8 +218,8 @@
   }
 
   .modal__close-btn_type_preview {
-   top: -40px;
-   right: -10px;
+    top: -40px;
+    right: -10px;
   }
 
   .modal__caption {
@@ -230,7 +228,7 @@
     padding: 4px 8px;
   }
 
-  .modal__image{
+  .modal__image {
     max-width: unset;
   }
 }
@@ -242,7 +240,4 @@
     padding: 89 88.43 16;
     border-radius: 4px;
   }
-
 }
-
-
